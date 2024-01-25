@@ -1,0 +1,31 @@
+    1  cat ~/.ssh/id_rsa.pub
+    2  git clone git@code.vt.edu:CGIT/ravt_mcmc_runner.git
+    3  ls
+    4  cd ravt_mcmc_runner/
+    5  ls
+    6  cd data
+    7  ls
+    8  open settings_generator.py 
+    9  vim settings_generator.py 
+   10  module load Python
+   11  python3 settings_generator.py
+   12  ls
+   13  cd settings_files
+   14  ls
+   15  cd ..
+   16  ls
+   17  sbatch --array=1-100 slurm_batch.sh SC bvap95_pp5
+   18  squeue -A ravt
+   19  ls
+   20  vim slurm-228840_100.out
+   21  python -m vend vend
+   22  python -m venv venv
+   23  ./venv/bin/pip install -r requirements.txt
+   24  sbatch --array=1-100 slurm_batch.sh SC bvap95_pp5
+   25  squeue -A ravt
+   26  sbatch --array=1-25 slurm_batch.sh PA competitive_reps
+   27  scancel 228944
+   28  squeue -A ravt
+   29  sbatch --array=1-25 slurm_batch.sh VA competitive_reps
+   30  squeue -A ravt
+   31  history > history_for_print.txt

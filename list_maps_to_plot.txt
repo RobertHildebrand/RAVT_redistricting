@@ -1,0 +1,2 @@
+GA_bg_compactness_25.0k_119_districts.geojson
+GA_bg__0.002k_00_districts.geojson
